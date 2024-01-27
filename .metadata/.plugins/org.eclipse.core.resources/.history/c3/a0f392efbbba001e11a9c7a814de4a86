@@ -1,0 +1,61 @@
+package j06_조건;
+
+import java.util.Scanner;
+
+public class If3 {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * 1. 빵(플랫화이트 , 허니 오트 , 파마산 오레가노)
+		 * 2. 치즈(모짜렐라,아메리칸, 슈레드)
+		 * 3. 토스팅(O / X)
+		 * 4. 야채 (뺄거)
+		 * 5. 소스 (1.렌치 , 2. 어니언, 3. 후추)
+		 * 6. 세트/단품
+		 * 
+		 */
+		String Bread = null;
+		String Cheese = null;
+		String toasting = null;
+		String vegetable = null;
+		String Sauce = null;
+		String Set = null;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("빵을 고르시오 :");
+		Bread = sc.nextLine();
+		System.out.println("치즈를 고르시오 :");
+		Bread = sc.nextLine();
+		System.out.println("토스팅 :");
+		Bread = sc.nextLine();
+		System.out.println("야채 유무 :");
+		Bread = sc.nextLine();
+		System.out.println("소스를 고르세요 :");
+		Bread = sc.nextLine();
+		
+		String result = null;
+		if(Bread.equals("플랫화이트"))
+		{
+			System.err.println("플랫화이트입니다.");
+		}else if(Bread.equals("허니 오트"))
+				{
+			System.err.println("허니 오트입니다.");
+		}else if(Bread.equals("파마산 오레가노"))
+				{
+			System.err.println("파마산 오레가노입니다.");
+		}
+		
+//		String name = null;
+//		System.out.println("치즈 입력 :");
+//		name = sc.nextLine();
+//		
+//		if(name.equals("파마산")) {
+//			System.out.println("파마산 입니다.");
+//		}else if(name.equals("모짜렐라")) {
+//			System.out.println("모짜렐라입니다.");
+//		}
+
+	}
+
+}

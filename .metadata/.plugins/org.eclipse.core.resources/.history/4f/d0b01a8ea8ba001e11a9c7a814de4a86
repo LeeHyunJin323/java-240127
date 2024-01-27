@@ -1,0 +1,20 @@
+package j06_조건;
+
+public class If1 {
+
+	public static void main(String[] args) {
+		
+
+		// 돈이 있으면 택시를 타고 돈이 없으면 걸어가라
+		boolean money = false;
+		
+		if(money) {
+			System.out.println("택시를 타고 가라");
+			
+		}
+		if(!money) {
+			System.out.println("걸어가라");
+		}
+	}
+
+}

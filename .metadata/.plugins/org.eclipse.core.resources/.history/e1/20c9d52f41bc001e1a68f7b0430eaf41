@@ -1,0 +1,30 @@
+package j07_반복.랜덤;
+
+import java.util.Scanner;
+import java.util.UUID;
+
+public class UUID1 {
+
+	public static void main(String[] args) {
+		/*
+		 * UUID
+		 * 토큰(sdf1-2sdf-15df-2131
+		 * 시리얼 번호 등록 - OTP()
+		 * 
+		 * 
+		 */
+		Scanner sc = new Scanner(System.in);
+		String savePhoto = null;
+//		System.out.println(UUID.randomUUID().toString());
+
+		System.out.print("이미지 첨부 : ");
+		savePhoto = sc.next();
+		
+		System.out.print("저장된 이미지 : ");
+		System.out.println(savePhoto);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package j04_문자열;
+
+public class String2 {
+
+	public static void main(String[] args) {
+		String address = "부산광역시 서구 부민동";
+		System.out.println(address.replace(' ', '-'));
+		// 스페이스바 부분을 - 으로 변경
+		
+		String address2 = "부산광역시 연제구 연산동";
+		String replaceAddress = address2.replaceAll(" 연", " 홍");
+		
+		System.out.println(replaceAddress);
+		
+	/*
+	 * 01033004698
+	 * -> 비밀번호 확인완료
+	 * 
+	 * 010-3300-4698
+	 * -> 01033004698 번호 저장완료
+	 * 
+	 * 010/3300/4698
+	 * -> 010330046698 번호 저장 완료
+	 * 
+	 * 010-3300-466987
+	 * -> 비밀번호가 옳바르지 않습니다.
+	 * 
+	 * 삼항연산자, replace 등을 사용
+	 * 
+	 */
+		
+		String phoneNumber = "01033004698";
+		// 맞다면 010-3300-4698로 변경해서 출력후 다시 비밀번호 저장완료 출력
+		
+		
+		
+	}
+
+}

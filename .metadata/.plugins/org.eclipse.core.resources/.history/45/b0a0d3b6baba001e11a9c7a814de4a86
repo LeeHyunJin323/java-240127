@@ -1,0 +1,38 @@
+package j06_조건;
+
+import java.util.Scanner;
+
+public class If3 {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * 1. 빵(플랫화이트 , 허니 오트 , 파마산 오레가노)
+		 * 2. 치즈(모짜렐라,아메리칸, 슈레드)
+		 * 3. 토스팅(O / X)
+		 * 4. 야채 (뺄거)
+		 * 5. 소스 (1.렌치 , 2. 어니언, 3. 후추)
+		 * 6. 세트/단품
+		 * 
+		 */
+		String Bread;
+		String Cheese;
+		boolean toasting;
+		String vegetable;
+		String Sauce;
+		String Set;
+		
+		Scanner sc = new Scanner(System.in);
+		String name = null;
+		System.out.println("치즈 입력 :");
+		name = sc.nextLine();
+		
+		if(name.equals("파마산")) {
+			System.out.println("파마산 입니다.");
+		}else if(name.equals("모짜렐라")) {
+			System.out.println("모짜렐라입니다.");
+		}
+
+	}
+
+}

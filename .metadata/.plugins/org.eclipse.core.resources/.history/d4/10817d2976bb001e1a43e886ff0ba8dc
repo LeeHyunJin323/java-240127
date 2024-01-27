@@ -1,0 +1,23 @@
+package j07_반복;
+
+public class DoubleWhile2 {
+
+	public static void main(String[] args) {
+
+		int i = 0;
+		int j = 0;
+		while(i<9) {
+			i++;
+			
+			while(j<9) {
+				System.out.println(i+"X"+j+ "="+i*j);
+				j++;
+			}
+			
+			
+		}
+
+
+	}
+
+}

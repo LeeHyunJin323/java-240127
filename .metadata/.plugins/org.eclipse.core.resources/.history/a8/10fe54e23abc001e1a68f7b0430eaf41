@@ -1,0 +1,15 @@
+package j07_반복.랜덤;
+
+public class Random1 {
+
+	public static void main(String[] args) {
+		
+//		System.out.println(Math.random());
+		double rNum = Math.random();
+		System.out.println(rNum*1000);
+		
+		
+
+	}
+
+}
