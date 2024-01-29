@@ -129,10 +129,12 @@ public class Kiosk {
 				System.out.println("올바르지 않은 입력입니다.");
 
 			} else {
+			    // length까지 돌려서 j ++ 해주면 1장 2장 3 장 이렇게 나옴.
+				
 				System.out.println("사진" + photoCount + "장이 나왔습니다.");
 				break;
-				
 
+				
 			}
 		}
 		}

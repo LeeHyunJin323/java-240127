@@ -1,0 +1,55 @@
+package j07_반복;
+
+public class Continue1 {
+
+	public static void main(String[] args) {
+		   
+		//0부터 9까지 출력하는 반복문 작성
+//		
+//		for (int i = 0; i<10; i++)
+//		{
+//			if(i%2 == 0)
+//			{
+//				//System.out.println("짝수");
+//				continue;
+//			}
+//			System.out.println(i);
+//
+//			
+//		}
+		
+		
+		//while은 안되나?
+//		int i = 0;
+//		
+//		while(i<10)
+//		{
+//			if(i%2 == 0)
+//			{
+//				continue;
+//			}
+//			System.out.println(i);
+//		}
+		
+		
+		/*
+		 * continue를 사용하여 1부터 129까지의 수 중 홀수의 합을 구하시오
+		 
+		 */
+		int sum = 0;
+	 for(int i =0; i<130; i++)
+	 {
+		 if(i%2 == 0)
+		 {
+			 continue;
+		 }
+		 System.out.println(i);
+		 sum += i;
+		 
+		 
+	 }
+	 System.out.println(sum);
+
+	}
+
+}

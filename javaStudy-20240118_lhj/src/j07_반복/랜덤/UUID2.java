@@ -19,6 +19,7 @@ public class UUID2 {
 	 * 
 	 * 
 	 */		 
+		
 		Scanner sc = new Scanner(System.in);
 		String savePhoto = null;
 		String saveImage = null;

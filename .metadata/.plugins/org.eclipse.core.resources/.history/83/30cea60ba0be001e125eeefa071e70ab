@@ -1,0 +1,27 @@
+package j08_메소드;
+
+public class Method3 {
+
+	/*
+	 * 메소드 오버로딩 (함수의 이름은 같고 매개 변수의 개수나 타입이 다름)
+	 */
+	
+	public static void test1()
+	{
+		System.out.println("매개변수가 없는 test1");
+	}
+	
+	public static void test1(int num) {
+		System.out.println("매개변수가 하나이고 int인 test2");
+	}
+	
+	
+	public static void main(String[] args) {
+	test1();	
+	test2(100);
+		
+		
+		
+	}
+
+}
