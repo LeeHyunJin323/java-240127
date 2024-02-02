@@ -1,0 +1,18 @@
+package j11_상속.factory;
+
+public class LGFactory extends Factory{
+
+	public LGFactory(int factoryNumber) {
+		super(factoryNumber);
+		
+	}
+	
+
+	public void start() {
+		System.out.println("엘지공장가동");
+	}
+	public void stop() {
+		System.out.println("엘지공장중지");
+	}
+  
+}

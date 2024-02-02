@@ -13,4 +13,8 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="j09_클래스.생성자.Constructor1"/>
+    <fullyQualifiedTypeName name="j09_클래스.생성자.Constructor2"/>
+    <fullyQualifiedTypeName name="j09_클래스.접근지정자.TestA_2"/>
+    <fullyQualifiedTypeName name="j09_클래스.접근지정자.TestA_1"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,11 @@
+package j11_상속.factory;
+
+public class FactoryMain4 {
+
+	public static void main(String[] args) {
+		Factory factory = new SamsungFactory(1);
+		Factory factory2 = new LGFactory(1);
+
+	}
+
+}

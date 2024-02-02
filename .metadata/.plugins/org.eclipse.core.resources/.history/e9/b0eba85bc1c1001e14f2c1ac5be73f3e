@@ -1,0 +1,22 @@
+package j11_상속.factory;
+
+public class SamsungFactory extends Factory {
+
+	
+	// 삼성생성자를 호출 하면 팩토리 생성자가 호출됨
+	
+	
+	//자식한테 받아서 부모한테 던져
+	public SamsungFactory(int factoryNumber) {
+		super(factoryNumber);
+	}
+
+	public void start(int factoryNumber) {
+		System.out.println("삼성"+factoryNumber+"공장가동");
+	}
+	public void stop(int factoryNumber) {
+		System.out.println("삼성"+factoryNumber+"공장중지");
+	}
+  
+	
+}

@@ -1,0 +1,45 @@
+package j11_상속.factory;
+
+public class FactoryMain4 {
+
+	public static void main(String[] args) {
+		Factory factory = new SamsungFactory(1);
+		Factory factory2 = new LGFactory(1);
+
+		
+		System.out.println(factory instanceof SamsungFactory);
+		// 팩토리의 근본이 삼성이니??? true면 맞음
+		
+		System.out.println(factory2 instanceof SamsungFactory);
+		//false
+		/*
+		 * 공장 6개(팩토리 배열)
+		 * 삼성1
+		 * 삼성2
+		 * 엘지1
+		 * 삼성3
+		 * 엘지2
+		 * 엘지3
+		 * 
+		 * 
+		 * 가동-생산-중지
+		 * 삼성1 공장을 가동합니다.
+		 * 스마트폰생산
+		 * 삼성1공장을 중지합니다.
+		 * 
+	     * 삼성2 공장을 가동합니다.
+		 * 스마트폰생산
+		 * 삼성2공장을 중지합니다.
+		 * 
+		 * 엘지1 공장을 가동합니다.
+		 * 스마트TV생산
+		 * 일지1공장을 중지합니다.
+		 */
+		Factory[] fac = new Factory[6];
+		
+		if(factory instanceof SamsungFactory == true) {
+			
+		}
+	}
+
+}

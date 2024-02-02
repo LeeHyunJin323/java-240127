@@ -1,0 +1,11 @@
+package j11_상속.factory;
+
+public class LGFactory extends Factory{
+	
+	public LGFactory(int factoryNumber) {
+		super(factoryNumber);
+	}
+
+	
+
+}

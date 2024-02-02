@@ -1,0 +1,18 @@
+package j11_상속.factory;
+
+public class FactoryMain2 {
+
+	public static void main(String[] args) {
+		
+		Factory factory = new SamsungFactory(1); // 부모도 자식꺼 사용중
+		//업 캐스팅
+		//주소는 삼성으로 찍힘 팩토리도 담았다?
+		
+		Factory[] factories = new Factory[4];
+	
+		factories[0] = new SamsungFactory(1);
+		factories[1] = new LGFactory(1);
+
+	}
+
+}

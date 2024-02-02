@@ -7,5 +7,12 @@ public class TestB {
 	public String getTb() {
 		return tb;
 	}
+	
+//넣을때는 set
+	// 뺄때는 get
+	public void setTb(String tb) {
+		this.tb = tb;
+	}
 
 }
+	
