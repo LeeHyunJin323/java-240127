@@ -30,8 +30,8 @@ public class ComputerMain {
 		c2.ram = 16;
 		c2.graphic ="GTX1080";
 		
-		c1.showInfo();
-		c2.showInfo();
+		System.out.println(c1);
+		System.out.println(c2);
 
 
 		System.out.println("전");
@@ -46,8 +46,9 @@ public class ComputerMain {
 		
 		c2.removeRam(8);
 		System.out.println("후");
-		c1.showInfo();
-		c2.showInfo();
+
+		System.out.println(c1);
+		System.out.println(c2);
 		
 		
 		

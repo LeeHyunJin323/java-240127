@@ -52,9 +52,9 @@
 			c1.model = "쏘나타";
 			c2.model = "k5";
 			
-			c1.showInfo();
+			c1.toString();
 			System.out.println();
-			c2.showInfo();
+			c2.toString();
 	
 			
 			c1.changeEngineOil();

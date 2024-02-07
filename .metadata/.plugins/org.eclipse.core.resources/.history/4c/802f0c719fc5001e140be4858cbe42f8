@@ -1,0 +1,38 @@
+package j11_상속.piano;
+
+public class MusicMain {
+
+	public static void main(String[] args) {
+	
+		Piano piano = new Piano(5);
+		NewPiano  newPiano = new NewPiano();
+		NewViolin  newViolin = new NewViolin(3);
+		Instrument insfg = new Piano(5);
+		Piano sz = (Piano) insfg;
+	
+		
+		
+	
+		
+		//업캐스팅
+		//부모꺼만 쓸 수 있음  부모 = 자식 해서 넣어줌
+		// 자식 = 부모 못넣음 
+		//피아노에서 업했다가 피아노로 내려오는건 가능
+		// 피아노로 업했는데 바이올린으로 내려오는건 x
+		
+ 		
+		
+		piano.piano(); // 상속받은 Instrument에서 들고옴
+		piano.soccer(); 
+		System.out.println();
+		newPiano.piano();
+		newPiano.baseball();
+		System.out.println();
+		newViolin.piano();
+		
+		
+		
+		
+	}
+
+}

@@ -7,16 +7,23 @@ public class Computer {
 	String cpu;
 	int ram;
 	String graphic;
-	
-	
-	void showInfo() {
-		System.out.println("제조년 : " + year + "년" ) ;
-		System.out.println("제조사 : " + company ) ;
-		System.out.println("CPU : " + cpu ) ;
-		System.out.println("RAM : " + ram ) ;
-		System.out.println("GraphicCard :" + graphic);
-		System.out.println();
+	 
+	 
+	@Override
+	public String toString() {
+
+		return "Computer [year=" + year + ", company=" + company + ", cpu=" + cpu + ", ram=" + ram + ", graphic="
+				+ graphic + "]";
 	}
+
+//	void showInfo() {
+//		System.out.println("제조년 : " + year + "년" ) ;
+//		System.out.println("제조사 : " + company ) ;
+//		System.out.println("CPU : " + cpu ) ;
+//		System.out.println("RAM : " + ram ) ;
+//		System.out.println("GraphicCard :" + graphic);
+//		System.out.println();
+//	}
 	
 	void addRam(int gigaByte) {
 		int overRam = ram;

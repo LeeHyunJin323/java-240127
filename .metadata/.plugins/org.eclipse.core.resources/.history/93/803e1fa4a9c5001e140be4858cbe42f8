@@ -1,0 +1,16 @@
+package j13_최상위클래스;
+
+public class Student {
+
+	private int studentCode;
+	private String name;
+	
+	public Student(int studentCode, String name) {
+		super();
+		this.studentCode = studentCode;
+		this.name = name;
+	}
+	
+	
+	
+}

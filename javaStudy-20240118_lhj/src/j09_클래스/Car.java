@@ -20,13 +20,21 @@ public class Car {
 	    	 //생략이 되있음
 		}
 		
-		void showInfo(){
-			System.out.println("회사명 :"+company);
-			System.out.println("모델명 :"+model);
-			System.out.println("색상 :"+color);
-			
-		}
-		
+	      @Override
+	    public String toString() {
+	    	// TODO Auto-generated method stub
+				System.out.println("회사명 :"+company);
+				System.out.println("모델명 :"+model);
+				System.out.println("색상 :"+color);
+	    	return super.toString();
+	    }
+//		void showInfo(){
+//			System.out.println("회사명 :"+company);
+//			System.out.println("모델명 :"+model);
+//			System.out.println("색상 :"+color);
+//			
+//		}
+//		
 		void changeEngineOil()
 		{
 			

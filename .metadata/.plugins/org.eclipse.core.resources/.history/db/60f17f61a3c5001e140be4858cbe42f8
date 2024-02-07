@@ -1,0 +1,9 @@
+package j13_최상위클래스;
+
+public class ToString2 {
+	
+	private int a;
+	private int b;
+	
+
+}
