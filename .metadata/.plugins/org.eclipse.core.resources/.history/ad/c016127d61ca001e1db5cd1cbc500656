@@ -1,0 +1,10 @@
+package j16_제네릭;
+
+public class GenericMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

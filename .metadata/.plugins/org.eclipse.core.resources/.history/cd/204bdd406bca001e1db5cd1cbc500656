@@ -1,0 +1,25 @@
+package j17_컬렉션.ArrayList;
+
+import java.util.ArrayList;
+
+public class StringList {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> list = new ArrayList<String>();
+		
+		//값 추가
+		list.add("java");
+		list.add("python");
+		list.add("C");
+		list.add("html");
+		
+		// 원하는 위치에 값 추가
+		list.add(1, "css");
+		
+		
+		System.out.println(list);
+
+	}
+
+}
