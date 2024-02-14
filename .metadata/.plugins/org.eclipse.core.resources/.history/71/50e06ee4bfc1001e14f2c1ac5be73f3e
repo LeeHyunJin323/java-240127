@@ -1,7 +1,0 @@
-package j11_상속.factory;
-
-public class Factory {
-
-	private int factoryNumber;
-	
-}
