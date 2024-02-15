@@ -1,0 +1,9 @@
+package j17_컬렉션.ArrayList;
+
+public class User {
+
+	private String username;
+	private String password;
+	private String naem;
+	private String email;
+}

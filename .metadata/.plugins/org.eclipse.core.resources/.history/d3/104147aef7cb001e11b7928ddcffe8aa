@@ -1,0 +1,73 @@
+package j17_컬렉션.ArrayList;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class UserArrayList {
+	Scanner sc = new Scanner(System.in);
+
+	private void addUser() {
+		
+		
+	}
+	
+	private void printUserList() {
+		
+	}
+	
+	public static void main(String[] args) {
+		/*
+		 * 
+		 * [사용자 관리 프로그램]
+		 * 1. 사용자 추가
+		 * 2. 사용자 리스트 출력
+		 * 3. 사용자 삭제
+		 * q. 프로그램 종료
+		 * 메뉴 선택 > 2
+		 * 
+		 * 
+		 * 메뉴선택 1
+		 * 
+		 * 아이디 : gildong
+		 * 비밀번호 : 1234
+		 * 이름: 홍길동
+		 * 이메일 : gildong@naver.com
+		 * 
+		 * 
+		 * 2 
+		 * 
+		 * 아이디 > gildong
+		 * 비밀번호 > 1234
+		 * 이름 : 홍길동
+		 * 이메일 gildong@navercom
+		 * 
+		 */
+		User user = new User();
+		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<String> list = new ArrayList<String>();
+		
+//		 * 메뉴선택 1
+//		 * 
+//		 * 아이디 : gildong
+//		 * 비밀번호 : 1234
+//		 * 이름: 홍길동
+//		 * 이메일 : gildong@naver.com
+//		 * 
+		
+		String select = null;
+		String ID = null;
+		
+		String n = null;
+		if(select.equals("1")) {
+		
+			System.out.println("아이디 :");
+			ID = sc.nextLine();
+		}
+		
+		// 1번일때 리스트에 추가 .add
+		
+
+	}
+
+}

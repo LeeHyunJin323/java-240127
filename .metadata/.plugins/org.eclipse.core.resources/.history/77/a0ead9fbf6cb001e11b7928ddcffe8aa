@@ -1,0 +1,12 @@
+package j17_컬렉션.ArrayList;
+
+import lombok.Data;
+
+@Data
+public class User {
+
+	private String username;
+	private String password;
+	private String naem;
+	private String email;
+}

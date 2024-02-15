@@ -1,0 +1,25 @@
+package j17_컬렉션.HashSet;
+
+import java.util.HashMap;
+
+public class Dictionary {
+
+	public static void main(String[] args) {
+		/*
+		 * 축구(soccer)
+		 * 야구(baseball)
+		 * 농구(baskeball)
+		 * 골프(golf)
+		 * 
+		 * [사전]
+		 * 1. 검색기능
+		 * 2. 추가기능
+		 * # 프로그램 종료(exit)
+		 * 
+		 * 
+		 */
+
+		HashMap<String, String> strMap  = new HashMap<String,String>();
+	}
+
+}

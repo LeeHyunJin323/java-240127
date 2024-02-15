@@ -1,0 +1,138 @@
+package j17_컬렉션.ArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import lombok.Builder;
+
+public class UserArrayList {
+
+	private List<User> userList; // 리스트 생성
+	//List는 인터페이스임 그래서 new 해서 생성이 안됨 그래서 ArrayList일때 new로 생성함
+	private Scanner sc;
+	
+	public UserArrayList() { // 기본생성자
+		userList = new ArrayList<User>(); // 객체가 생성 될때 만들어짐
+		sc = new Scanner(System.in);
+	}
+	
+	
+	
+	private void addUser() {
+		String userName = null;
+		String password = null;
+		String name = null;
+		String email = null;
+		
+		System.out.println("아이디 :");
+		userName = sc.nextLine();
+		System.out.println("비밀번호 :");
+		password = sc.nextLine();
+		System.out.println("이름 :");
+		name = sc.nextLine();
+		System.out.println("이메일 :");
+		email = sc.nextLine();
+		
+		// 빌더 만들기 User user 클래스명.builder() 빌더는 스태틱 지금 어노테이션으로 빌더가 생겨서 User 클래스명.빌더로 사용이 가능
+		User user = User.builder()
+				.username(userName)
+				.password(password)
+				.name(name)
+				.email(email)
+				.build();
+		
+		userList.add(user); // userList에 user 빌더 생성한거 삽입
+
+		
+	}
+	
+	private void printUserList() {
+		//user의 값 뭐 getName이런걸로 아이디값 가져올려고 data달아둠
+		for(User user : userList) {
+			System.out.println("아이디\t\t >" + user.getUsername());
+			System.out.println("비밀번호\t\t >" + user.getPassword());
+			System.out.println("이름\t\t >" + user.getName());
+			System.out.println("이메일\t\t >" + user.getEmail());
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		/*
+		 * 
+		 * [사용자 관리 프로그램]
+		 * 1. 사용자 추가
+		 * 2. 사용자 리스트 출력
+		 * 3. 사용자 삭제
+		 * q. 프로그램 종료
+		 * 메뉴 선택 > 2
+		 * 
+		 * 
+		 * 메뉴선택 1
+		 * 
+		 * 아이디 : gildong
+		 * 비밀번호 : 1234
+		 * 이름: 홍길동
+		 * 이메일 : gildong@naver.com
+		 * 
+		 * 
+		 * 2 
+		 * 
+		 * 아이디 > gildong
+		 * 비밀번호 > 1234
+		 * 이름 : 홍길동
+		 * 이메일 gildong@navercom
+		 * 
+		 */
+		
+//		Scanner sc = new Scanner(System.in);
+//		
+//		ArrayList<User> list = new ArrayList<User>();
+		
+//		 * 메뉴선택 1
+//		 * 
+//		 * 아이디 : gildong
+//		 * 비밀번호 : 1234
+//		 * 이름: 홍길동
+//		 * 이메일 : gildong@naver.com
+//		 * 
+		
+
+//		
+//		String select = null;
+//		String ID = null;
+//		String PW = null;
+//		String name = null;
+//		String email = null;
+//		
+//		String n = null;
+//		
+//		select = sc.nextLine();
+//		if(select.equals("1")) {
+//		
+//			System.out.print("아이디 :");
+//			ID = sc.nextLine();
+//			list.add(ID);
+//			
+//			System.out.print("비밀번호 :");
+//			PW = sc.nextLine();
+//			list.add(PW);
+//			
+//			System.out.print("이름 : ");
+//			name = sc.nextLine();
+//			list.add(name);
+//			
+//			System.out.println("이메일 :");
+//			email = sc.nextLine();
+//			list.add(email);
+//			
+//		}
+//		
+//		System.out.println(list);
+		// 1번일때 리스트에 추가 .add
+		
+
+	}
+
+}

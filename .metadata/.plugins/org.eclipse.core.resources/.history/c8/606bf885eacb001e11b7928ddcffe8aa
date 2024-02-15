@@ -1,0 +1,19 @@
+package j17_컬렉션.HashSet;
+
+import java.util.HashMap;
+
+public class StringMap {
+
+	public static void main(String[] args) {
+		HashMap<Integer , String> strMap = new HashMap<Integer,String>();
+		
+		strMap.put(1, "java");
+		strMap.put(1, "java");
+		strMap.put(1, "java");
+		strMap.put(1, "java");
+		
+		System.out.println(strMap);
+		
+	}
+
+}
