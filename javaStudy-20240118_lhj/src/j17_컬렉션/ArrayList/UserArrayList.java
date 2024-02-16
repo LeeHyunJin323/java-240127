@@ -14,7 +14,9 @@ public class UserArrayList {
 	private Scanner sc;
 	
 	public UserArrayList() { // 기본생성자
-		userList = new ArrayList<User>(); // 객체가 생성 될때 만들어짐
+		userList = new ArrayList<User>();  // userList는 ArrayList<User> 의 형태로 선언 
+		// UserArrayList()가 생성될 때 userList가 초기화 됨
+
 		sc = new Scanner(System.in);
 	}
 	
@@ -34,6 +36,15 @@ public class UserArrayList {
 		name = sc.nextLine();
 		System.out.println("이메일 :");
 		email = sc.nextLine();
+		
+		//User user = new User(userName,password,name,email);
+		
+		//set으로 삽입방법   @Data로 인한 setter가 생성됐기 떄문에 이렇게 삽입이 가능
+//	    User user = new User();
+//	    user.setUsername(userName);
+//	    user.setPassword(password);
+//	    user.setName(name);
+//	    user.setEmail(email);
 		
 		// 빌더 만들기 User user 클래스명.builder() 빌더는 스태틱 지금 어노테이션으로 빌더가 생겨서 User 클래스명.빌더로 사용이 가능
 		User user = User.builder()
@@ -58,6 +69,49 @@ public class UserArrayList {
 		}
 		
 	}
+	private void RemoveUser() {
+		String userName = null;
+		String password = null;
+		System.out.print("아이디 :");
+		userName = sc.nextLine();
+		
+		for(User user : userList) {
+		if(user.getUsername().equals(userName)) {
+			
+			System.out.print("비밀번호 :");
+			password = sc.nextLine();
+			if(user.getPassword().equals(password)) {
+				userList.remove(user);
+				System.out.println("유저 삭제 완료");
+			}else {
+				System.out.println("비밀번호가 올바르지 않습니다.");
+			}
+			return;  // if 에 걸리면 리턴 안되면 바로 존재핮 않는 아이디
+					
+		}
+		
+		
+		}
+		System.out.println("존재하지 않는 아이디 입니다.");
+		
+	
+	}
+//	 * 
+//	 * 3이면 
+//	 * 
+//	 * 아이디를 입력하시오 : gildong
+//	 * 비밀번호를 입력하시오 :1234
+//	 * 유저가 삭제되었습니다
+//	 * 
+//	 * 아이디르 입력하시오 : gildong
+//	 * 비밀번호를 입력하시오 :12345
+//	 * 비밀번호가 올바르지 않습니다.
+//	 * 
+//	 * 
+//	 * 아이디를 입력하시오 : gildong2
+//	 * 존재하지 않는 아이디입니다.
+	
+	
 	
 	public static void main(String[] args) {
 		
@@ -74,14 +128,23 @@ public class UserArrayList {
 			System.out.println("q. 프로그램 종료");
 			System.out.print("메뉴 선택 >");
 			
-			select = userArrayList.getSc().nextLine();
+			select = userArrayList.getSc().nextLine(); 
+			
+			//private Scanner sc 를 객체. 메소드로 사용
 			
 			if(select.equals("1")) {
 				userArrayList.addUser();
 			}else if(select.equals("2")) {
 				userArrayList.printUserList();
+			}else if(select.equals("3")) {
+				userArrayList.RemoveUser();
 			}
 		}
+		
+
+		
+		
+		
 		/*
 		 * 
 		 * [사용자 관리 프로그램]
@@ -107,6 +170,20 @@ public class UserArrayList {
 		 * 이름 : 홍길동
 		 * 이메일 gildong@navercom
 		 * 
+		 * 
+		 * 3이면 
+		 * 
+		 * 아이디를 입력하시오 : gildong
+		 * 비밀번호를 입력하시오 :1234
+		 * 유저가 삭제되었습니다
+		 * 
+		 * 아이디르 입력하시오 : gildong
+		 * 비밀번호를 입력하시오 :12345
+		 * 비밀번호가 올바르지 않습니다.
+		 * 
+		 * 
+		 * 아이디를 입력하시오 : gildong2
+		 * 존재하지 않는 아이디입니다.
 		 */
 		
 //		Scanner sc = new Scanner(System.in);
@@ -154,6 +231,7 @@ public class UserArrayList {
 //		
 //		System.out.println(list);
 		// 1번일때 리스트에 추가 .add
+		
 		
 
 	}

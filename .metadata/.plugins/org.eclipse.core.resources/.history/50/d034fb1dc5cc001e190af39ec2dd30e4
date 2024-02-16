@@ -1,0 +1,15 @@
+package j18_JSON;
+
+import com.google.gson.Gson;
+
+public class Gson1 {
+
+	public static void main(String[] args) {
+		
+		//Gson 객체 생성하는 방법
+		// 1. Gosn() 생성자를 통해 생성
+		Gson gson1 = new Gson();
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package j18_JSON;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+import j17_컬렉션.ArrayList.User;
+import j17_컬렉션.ArrayList.UserArrayList;
+import lombok.Data;
+
+@Data
+public class UserService {
+
+
+	// 리턴은 유저 void이런거 ㅇㅇ
+	public static User createUser() {
+		//user 객체(내 정보) 만들고 리턴
+
+           List<String> list = new ArrayList<String>();
+           list.addAll(Arrays.asList(new String[] {"축구","농구","야구","골프","턱걸이"}));
+           //User 클래스에서 builder
+           User user = User.builder()  
+        		   .userCode(0)
+        		   .username("gildong")
+        		   .password("1234")
+        		   .name("길동")
+        		   .email("gildong@naver.com")
+        		   .address("부산광역시 진구")
+        		   .phone("010-1234-5678")
+        		   .hobby(null)
+        		   .build();
+           
+           return user;
+
+		
+		
+		
+	}
+}
