@@ -1,0 +1,28 @@
+package j19_익명클래스.람다식;
+
+public class TestMain {
+public static void main(String[] args) {
+	
+	/*
+	 * 람다식 패키지 안에
+	 * MathTest라는 인터페이스 만들기
+	 * test메소드 만들기
+	 * 
+	 * 테스트 메소드에 정수인 점수 던지기
+	 * A학점 or
+	 * B학점 or
+	 * 계산불가를 리턴
+	 * 
+	 * 
+	 *
+	 */
+	MathTest<Integer, Integer> math4 = (v1,v2) ->{
+		System.out.println("hi");
+		return 3.14;
+		
+	};
+	
+	
+
+}
+}

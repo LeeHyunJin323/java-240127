@@ -21,7 +21,6 @@ public class Gson2 {
 		User userObj = gson.fromJson(userJson , User.class);
 		System.out.println(userObj.getAddress()); // 원하는 값 뽑기
 		
-
 	}
 
 }

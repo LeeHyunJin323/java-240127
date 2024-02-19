@@ -1,0 +1,10 @@
+package j20_예외처리;
+
+public class ExceptionTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package j19_익명클래스.람다식;
+
+public interface MathTest {
+	public double test(T1 value1, T2 value2);
+}

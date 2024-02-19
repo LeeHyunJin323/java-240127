@@ -12,7 +12,6 @@ import lombok.Data;
 @Data
 public class UserService {
 
-
 	// 리턴은 유저 void이런거 ㅇㅇ
 	public static j18_JSON.User createUser() {
 		//user 객체(내 정보) 만들고 리턴
