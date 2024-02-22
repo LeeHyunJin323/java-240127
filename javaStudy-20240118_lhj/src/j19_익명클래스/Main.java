@@ -20,6 +20,7 @@ public class Main {
 		// 그럼 짧은 익명클래스ㅡㄹ 사용하는데도 두개 만들어야하니 불편함
 		// 그래서 익명 클래스 생성해줌
 		
+		//! 클래스가 한번만 사용되고 재사용될 필요 없는 경우
 		
 		AbstractTest abstractTest2 = new AbstractTest() {
 			

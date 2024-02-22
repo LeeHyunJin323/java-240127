@@ -13,6 +13,7 @@ public class TestMain {
 		 * 
 		 */
 
+
 		// 매개변수가 하나일 시 소괄호 생략가능
 		MathTest math5 = v1 -> {
 			if (v1 <= 0 || v1 >= 100) {
