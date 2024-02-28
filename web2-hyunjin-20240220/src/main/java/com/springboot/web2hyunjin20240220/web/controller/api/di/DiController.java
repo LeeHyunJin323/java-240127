@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class DiController {
 	
     // new 대신 의존성 주입 
-	@Autowired
-	@Qualifier("t1") 
+	@Autowired 
+	@Qualifier("t1") // 원래는 final을 붙여줌 requ이랑
+	// 근데 Auto로 자동으로 잡아주고 quali에서는 사용할걸 잡아줌
+	
 	private TestInterface testInterface;
 	//testInterface가 두개라서  실행이 안됨 
 	// 그래서 이름 달아주고 객체 하나 더 생성
