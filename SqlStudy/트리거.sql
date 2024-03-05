@@ -1,7 +1,7 @@
 INSERT into user2_mst VALUES
-(0,'홍길동',
-'hong@gmail.com',
-'hong',
+(0,'홍길동5',
+'hong5@gmail.com',
+'hong5',
 '1234',
 'ROLE_USER',
 'google',
@@ -22,8 +22,19 @@ VALUES(
 0,NOW(),NOW());
 
 
-DELETE
-FROM 
-   user2_mst
-WHERE
-   user_code =1;
+
+   
+SELECT *FROM board_mst;
+SELECT *FROM user2_mst;
+SELECT *from user_dtl;
+
+
+SELECT bm.boardcode,
+bm.title, 
+um.user_code, 
+um.username, 
+bm.content,
+um.create_date,
+um.update_date
+FROM user2_mst um
+LEFT OUTER JOIN board_mst bm ON(um.user_code = bm.usercode);

@@ -1,16 +1,22 @@
 package com.springboot.web2hyunjin20240220.web.controller.api.board;
 
+import java.util.List;
+
 import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.web2hyunjin20240220.service.board.BoardService;
 import com.springboot.web2hyunjin20240220.web.dto.CMRespDto;
 import com.springboot.web2hyunjin20240220.web.dto.board.CreateBoardReqDto;
+import com.springboot.web2hyunjin20240220.web.dto.board.ReadBoardRespDto;
 
 import lombok.RequiredArgsConstructor;
 //게시판 (board) crud
@@ -64,6 +70,41 @@ public class BoardController {
 	      }
 	      return ResponseEntity.ok().body(new CMRespDto<>(1,"게시글 등록 성공",null));
 	   }
+	   
+	   
+	   
+	      @GetMapping("/count/{boardcode}")
+	      public ResponseEntity<?> getBoard(@PathVariable int boardcode){
+//	         System.out.println("boardcode : " + boardcode);
+	    	  
+	    	  ReadBoardRespDto readBoardRespDto = null;
+	    	  
+	    	  try {
+	    		  readBoardRespDto = boardService.readBoard(boardcode);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return ResponseEntity.ok().body((new CMRespDto<>(-1,"게시글 조회 실패",readBoardRespDto)));
+			}
+	         return ResponseEntity.ok().body((new CMRespDto<>(1,"게시글 조회 성공",readBoardRespDto)));
+	      }
+	      
 	
+	      @GetMapping("/list")
+	      public ResponseEntity<?> getBoardList(@RequestParam int page)
+	      {
+	    	  List<ReadBoardRespDto> boardtoList = null;
+	    	  try {
+	    		  boardtoList=boardService.readBoardList(page);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return ResponseEntity.ok().body(new CMRespDto<>(-1,"게시글 리스트"+ page +"실패",boardtoList));
+			}
+	    	  return ResponseEntity.ok().body(new CMRespDto<>(1,"게시글 리스트"+ page +"성공",boardtoList));
+	    
+	      }
+	      
+	      
 
 }
