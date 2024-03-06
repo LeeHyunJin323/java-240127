@@ -5,7 +5,7 @@ import com.example.todolist.domain.content.Todo;
 import lombok.Builder;
 import lombok.Data;
 
-@Builder
+
 @Data
 public class CreateTodoReqDto {
     private String content;

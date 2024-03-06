@@ -24,6 +24,16 @@ public boolean createTodo(CreateTodoReqDto createTodoReqDto) throws Exception {
 	//! 엔티티변경
 	// dto에서 entity로 바뀐값이 todoEntity에 들어감
 	
+//	for(int i= 0; i < 100 ; i++)
+//	{
+//		todoEntity = Todo.builder()
+//				.content("게시글" + (i+1))
+//				.user_code(1)
+//				.build();
+//		
+//		todoRepository.save(todoEntity) > 0;
+//	}
+	
 // save = 저장된 개수만큼 그래서 0보다 클때 리턴해준다	
 	return todoRepository.save(todoEntity) > 0;
 	//! 레파지토리로 던져줌

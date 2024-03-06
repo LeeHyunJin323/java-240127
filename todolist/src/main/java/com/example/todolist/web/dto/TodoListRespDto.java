@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Builder
 @Data
+
 public class TodoListRespDto {
 	private int contentCode;
 	private String content;

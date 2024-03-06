@@ -37,4 +37,4 @@ bm.content,
 um.create_date,
 um.update_date
 FROM user2_mst um
-LEFT OUTER JOIN board_mst bm ON(um.user_code = bm.usercode);
+LEFT OUTER JOIN board_mst bm ON(um.user_code = bm.usercode);content_mstcontent_mst
