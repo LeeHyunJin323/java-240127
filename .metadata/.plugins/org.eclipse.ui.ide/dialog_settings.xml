@@ -38,6 +38,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\web-lhj\web-lhj\java\workspace\pracetice"/>
 			<item value="C:\web-lhj\web-lhj\java\workspace\checkTodolist"/>
 			<item value="C:\web-lhj\web-lhj\java\workspace\todolist3"/>
 			<item value="C:\web-lhj\web-lhj\java\workspace\todolist2"/>

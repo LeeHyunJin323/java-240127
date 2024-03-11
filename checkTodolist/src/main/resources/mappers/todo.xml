@@ -22,22 +22,67 @@
 	  
 	  <select id="getTodoListOfIndex" parameterType="hashmap" resultType="com.checkTodolist.checkTodolist.domain.todo.Todo">
 		  
-		  select
-		*
-		   from
-		   todo_mst
-		   where 
-		   <choose>
-			   <when test='type.equals("1")'>
-			   importance_flag = 1
-			   
-		   </when>
-		   </choose>
-		   order by
-		   todo_code desc
-		   limit
-		   #{index}, #{count}
-		  
-		  
-	  </select>
+       select
+           tm.todo_code,
+           tm.todo_content,
+           tm.todo_complete,
+           tm.importance_flag,
+           
+           tt.total_count,
+           tc.incomplete_count,
+           tm.create_date,
+           tm.update_date
+        from
+           todo_mst tm
+           left outer join(
+           SELECT 
+                 COUNT(*) as total_count
+            FROM 
+            todo_mst 
+            WHERE 
+            <choose>
+         
+            <when test='type.equals("importance")'>
+            importance_flag = 1 
+            
+            </when>
+            <when test='type.equals("complete")'>
+               todo_complete = 1
+            
+            </when>
+            <when test='type.equals("incomplete")'>
+               todo_complete = 0
+            </when>
+         </choose>
+           ) tt on(1=1)
+                left outer join(
+           SELECT 
+                 COUNT(*) as incomplete_count
+            FROM 
+            todo_mst 
+            WHERE 
+               todo_complete = 0
+               <if test='type.equals("importance")'>
+                  and importance_flag=0
+               </if>
+           ) tc on(1=1)
+        where 
+         <choose>
+            <when test='type.equals("importance")'>
+            importance_flag = 1 
+            </when>
+            <when test='type.equals("complete")'>
+               todo_complete = 1
+            </when>
+            <when test='type.equals("incomplete")'>
+               todo_complete = 0
+            </when>
+         </choose>
+        order by
+           todo_code desc
+        limit
+           #{index},#{count}
+        
+     </select>
+
   </mapper>

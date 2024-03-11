@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,12 +42,12 @@ public class TodoController {
 	}
 	
 	
-	@GetMapping("/list")
-	public ResponseEntity<?> getTodoList(@RequestParam int page, int contentCount)
+	@GetMapping("/list/{type}")
+	public ResponseEntity<?> getTodoList(@PathVariable String type, @RequestParam int page, int contentCount)
 	{
 		List<TodoListRespDto> list = null; 
 		try {
-			list = todoService.getToList(page, contentCount);
+			list = todoService.getToList(type ,page, contentCount);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -50,12 +50,12 @@ public class TodoServiceImpl implements TodoService{
 	}
 
 	@Override
-	public List<TodoListRespDto> getToList(int page, int contentCount) throws Exception {
+	public List<TodoListRespDto> getToList(String type , int page, int contentCount) throws Exception {
 	
 		Map<String, Object> map = new HashMap<String , Object>();
 		map.put("index", (page - 1 ) * contentCount);
 		map.put("count", contentCount);
-		map.put("type", "1");
+		map.put("type", type);
 		
 		
 		List<Todo> todolist = todoRepository.getTodoListOfIndex(map);

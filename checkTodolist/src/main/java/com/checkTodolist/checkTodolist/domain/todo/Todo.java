@@ -20,8 +20,10 @@ public class Todo {
 	private int todo_complete;
 	private int importance_flag;
 	
-	private LocalDateTime create_data;
-	private LocalDateTime update_data;
+	private int total_count;
+	private int incomplete_count;
+	private LocalDateTime create_date;
+	private LocalDateTime update_date;
 	
 	
 	public TodoListRespDto toListDto() {
@@ -30,8 +32,11 @@ public class Todo {
 				.todo(todo_content)
 				.todoComplete(todo_complete == 1)
 				.importance(importance_flag == 1)
-				.createDate(create_data)
-				.updateDate(update_data) 
+				
+				.totalCount(total_count)
+				.incompleteCount(incomplete_count)
+				.createDate(create_date)
+				.updateDate(update_date) 
 				.build();
 	}
 }

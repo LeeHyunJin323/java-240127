@@ -13,6 +13,8 @@ public interface TodoService {
 	public boolean createTodo(CreateTodoReqDto createTodoReqDto) throws Exception;
 	
 	
-	public List<TodoListRespDto> getToList(int page, int contentCount )throws Exception;
+	public List<TodoListRespDto> getToList(String type ,int page, int contentCount )throws Exception;
+	
+	
 	
 }
