@@ -11,6 +11,7 @@ import com.checkTodolist.checkTodolist.domain.todo.Todo;
 import com.checkTodolist.checkTodolist.domain.todo.TodoRepository;
 import com.checkTodolist.checkTodolist.web.controller.dto.CreateTodoReqDto;
 import com.checkTodolist.checkTodolist.web.controller.dto.TodoListRespDto;
+import com.checkTodolist.checkTodolist.web.controller.dto.UpdateTodoReqDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -70,4 +71,32 @@ public class TodoServiceImpl implements TodoService{
 	}
 	
 	
+	@Override
+	public boolean updateTodoComplete(int todoCode) throws Exception {
+		
+		
+		return todoRepository.updataTodoComplete(todoCode)>0;
+	}
+	
+	@Override
+	public boolean updateTodoImportance(int todoCode) throws Exception {
+		// TODO Auto-generated method stub
+		return todoRepository.updataTodoImportance(todoCode)>0;
+	}
+	
+	
+	@Override
+	public boolean updateTodo(UpdateTodoReqDto updateTodoReqDto) throws Exception {
+		
+		return todoRepository.updateTodoByTodoCode(updateTodoReqDto.toEntity()) > 0;
+	}
+	
+
+
+	
+	@Override
+	public boolean removeTodo(int todoCode) throws Exception {
+		// TODO Auto-generated method stub
+		return todoRepository.remove(todoCode) > 0;
+	}
 }

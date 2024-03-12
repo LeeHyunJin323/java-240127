@@ -35,4 +35,26 @@
 		NOW())
 		  
 	  </insert>
+	  
+	  
+	  <select id="pageLoadRepository" parameterType="Integer" resultType="com.practice.pracetice.domain.practice.Practice"> 
+		  SELECT 
+			pb.board_id,
+			pb.board_title,
+			pb.board_content,
+			pb.user_id,
+			pu.user_username,
+			pb.create_date,
+			pb.update_date
+			from
+			 practice_board pb
+			 LEFT OUTER JOIN practice_user pu ON(pb.user_id = pu.user_id)
+			 ORDER by 
+			 pb.create_date DESC 
+			 LIMIT 
+			   #{index},10;
+		  
+		</select>
+		
+
   </mapper>

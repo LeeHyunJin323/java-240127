@@ -13,6 +13,12 @@ public interface TodoRepository {
 	public List<Todo> getTodoListOfIndex(Map<String, Object >map) throws Exception;
 
 
+	public int updataTodoComplete(int todo_code) throws Exception;
 	
+	public int updataTodoImportance(int todo_code) throws Exception;
+	
+	public int updateTodoByTodoCode(Todo todo) throws Exception;
+	
+	public int remove(int todo_code) throws Exception;
 	
 }

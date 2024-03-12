@@ -1,6 +1,8 @@
 package com.practice.pracetice.web.controller.api;
 
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +17,7 @@ import com.practice.pracetice.web.dto.Info2;
 import com.practice.pracetice.web.dto.PracticeBoardReqDto;
 import com.practice.pracetice.web.dto.PracticeRespDto;
 import com.practice.pracetice.web.service.PracticeService;
+import com.practice.pracetice.web.service.PracticeServiceImpl;
 
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;
@@ -118,6 +121,22 @@ public class DataController {
 		
 		
 		return ResponseEntity.ok().body(new CMRespDto<>(1,"성공",practiceBoardReqDto));
+	}
+	
+	
+	@PostMapping("page")
+	public ResponseEntity<?> pageLoad(int page)
+	{
+		List<PracticeRespDto> list = null;
+		
+	     
+		try {
+			list = practiceService.pageLoadService(page);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1,"성공", list));
 	}
 	
 }

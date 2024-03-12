@@ -1,5 +1,7 @@
 package com.practice.pracetice.domain.practice;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -14,4 +16,10 @@ public interface PracticeRepository {
 	public Practice findBoard(int num) throws Exception;
 	
 	public int boardInput(Practice practice) throws Exception;
+	
+	public List<Practice> pageLoadRepository(int index) throws Exception;
+	
+	public int updataTodoComplete(int todo_code) throws Exception;
+	
+	public int updataTodoImportance(int todo_code) throws Exception;
 }
