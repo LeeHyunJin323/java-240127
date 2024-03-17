@@ -9,9 +9,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
-@EnableWebSecurity
+@EnableWebSecurity 
 @Configuration
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
+public class SecurityConfig extends WebSecurityConfigurerAdapter{ // 로그인 페이지 상속 받음
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.formLogin() // 5) 로그인 방식은 form 로그인을 사용하겠다.
 		.loginPage("/auth/signin") // 6)로그인 페이지 해당 get요청을 통해 접근
 		.loginProcessingUrl("/auth/signin") // 7) 로그인 요청(post)
-		.failureHandler(new AuthFailerHandler())
+		.failureHandler(new AuthFailerHandler()) // 뭐가 터지면 여기서 처리
 		.defaultSuccessUrl("/index");
 
 		
